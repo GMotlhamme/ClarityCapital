@@ -1,5 +1,4 @@
 import axios from "axios";
-import ContentHeader from "../components/ContentHeader"
 
 export default function Login(){
      async function handleLogin(e: React.FormEvent) {
@@ -21,27 +20,35 @@ export default function Login(){
     return(
         <>
         <section>
-            <ContentHeader/>
-            <h3>Welcome Back.</h3>
-            <form onSubmit={handleLogin}>
-                <div>
+            <div className="flex flex-col items-center justify-center gap-4 pt-4">
+            <img src="/public/Claritylogo.png" className="object-contain h-60" alt="logo" />
+
+            </div>
+
+            <section className="p-8">
+
+            <h3 className="text-4xl text-center mb-8">Welcome Back!!</h3>
+            <form className="" onSubmit={handleLogin}>
+                <div className="flex flex-col gap-2 mb-4">
                     <label htmlFor="">Username</label>
-                    <input required type="text" />
+                    <input className="p-4 border-2 border-neutral-700 rounded" required type="text" />
                 </div>
-                <div>
+                <div className="flex flex-col gap-2 mb-4">
                     <label htmlFor="">Account Number</label>
-                    <input required type="text" />
+                    <input className="p-4 border-2 border-neutral-700 rounded" required type="number" />
                 </div>
-                <div>
+                <div className="flex flex-col gap-2 mb-4">
                     <label htmlFor="">Password</label>
-                    <input required type="password" />
+                    <input className="p-4 border-2 border-neutral-700 rounded" required type="password" />
                 </div>
-                <button>Sign In</button>
+                <button className="w-full mt-8 p-4 border-2 rounded text-xl text-blue-950 border-blue-900">Sign In</button>
             </form>
 
-            <div>
-                <button>Forgot Password</button>
+            <div className="flex mt-8">
+                <button className="text-center  w-full  cursor-pointer">Forgot Password?</button>
+                <button className="text-center w-full cursor-pointer">Create Account</button>
             </div>
+            </section>
         </section>
         </>
     )
