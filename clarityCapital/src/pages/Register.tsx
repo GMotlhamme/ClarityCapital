@@ -1,29 +1,37 @@
-export default function Register(){
-    return(
+import { Link } from "react-router";
+
+export default function Register() {
+    return (
         <>
-        <section>
-            <h3>Own Your Tomorrow</h3>
-            <h3>Capital Account.</h3>
-            <form action="">
-                <div>
-                    <label htmlFor="">Username</label>
-                    <input required type="text" />
+            <section className="px-8">
+                <div className="flex justify-center -m-8 -mt-12">
+                    <img src="/public/ClarityCapital.png" className="object-contain" alt="logo" />
                 </div>
-                <div>
-                    <label htmlFor="">ID Number</label>
-                    <input required type="text" />
-                </div>
-                <div>
-                    <label htmlFor="">Account Number</label>
-                    <input required type="text" />
-                </div>
-                <div>
-                    <label htmlFor="">Password</label>
-                    <input required type="password" />
-                </div>
-                <button>Create Account</button>
-            </form>
-        </section>
+                <form className="-mt-14" action="">
+                    <div className="flex flex-col gap-2 mb-4">
+                        <label htmlFor="">Username</label>
+                        <input className="p-4 border-2 border-neutral-700 rounded" required type="text" />
+                    </div>
+                    <div className="flex flex-col gap-2 mb-4">
+                        <label htmlFor="">ID Number</label>
+                        <input className="p-4 border-2 border-neutral-700 rounded" required type="number" />
+                    </div>
+                    <div className="flex flex-col gap-2 mb-4">
+                        <label htmlFor="">Account Number</label>
+                        <input className="p-4 border-2 border-neutral-700 rounded" required type="number" />
+                    </div>
+
+                    <div className="flex flex-col gap-2 mb-4">
+                        <label htmlFor="">Password</label>
+                        <input className="p-4 border-2 border-neutral-700 rounded" required type="password" />
+                    </div>
+
+                        <button className="w-full mt-4 p-4 border-2 rounded text-xl text-blue-950 border-blue-900">Create Account!</button>
+                </form>
+                    <div className="flex mt-8">
+                        <Link to="/Login" className="text-center w-full cursor-pointer">Already registered? Sign In</Link>
+                    </div>
+            </section>
         </>
     )
 }

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Link } from "react-router";
 
 export default function Login(){
      async function handleLogin(e: React.FormEvent) {
@@ -20,15 +21,15 @@ export default function Login(){
     return(
         <>
         <section>
-            <div className="flex flex-col items-center justify-center gap-4 pt-4">
-            <img src="/public/Claritylogo.png" className="object-contain h-60" alt="logo" />
+            <div className="flex flex-col items-center justify-center gap-4 pt-18 transition-all duration-300">
+            <img src="/public/Claritylogo.png" className="object-contain h-40" alt="logo" />
 
             </div>
 
             <section className="p-8">
 
-            <h3 className="text-4xl text-center mb-8">Welcome Back!!</h3>
-            <form className="" onSubmit={handleLogin}>
+            <h3 className="text-4xl text-blue-950 text-center mb-8">Welcome Back!!</h3>
+            <form  onSubmit={handleLogin}>
                 <div className="flex flex-col gap-2 mb-4">
                     <label htmlFor="">Username</label>
                     <input className="p-4 border-2 border-neutral-700 rounded" required type="text" />
@@ -46,7 +47,7 @@ export default function Login(){
 
             <div className="flex mt-8">
                 <button className="text-center  w-full  cursor-pointer">Forgot Password?</button>
-                <button className="text-center w-full cursor-pointer">Create Account</button>
+                <Link to="/Register" className="text-center w-full cursor-pointer">Create Account</Link>
             </div>
             </section>
         </section>
