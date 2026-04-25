@@ -10,9 +10,11 @@ export default function PaymentGate() {
                     <div className="flex flex-col gap-2 mb-4">
                         <label htmlFor="">Currency</label>
                         <select className="p-4 border-2 border-neutral-700 rounded w-full" required name="" id="">
-                            <option value="">Select Currency</option>
-                            <option value="USD">USD</option>
-                            <option value="EUR">EUR</option>
+                            <option  disabled>Select Currency</option>
+                            <option  value="EUR">EUR</option>
+                            <option  value="USD">USD</option>
+                            <option  value="YEN">YEN</option>
+                            <option  value="CAD">CAD</option>
                         </select>
                     </div>
                     <div className="flex flex-col  gap-2 mb-4">
@@ -29,7 +31,11 @@ export default function PaymentGate() {
                     <h3 className="text-xl">Finalization</h3>
                     <form action="">
                         <div className="flex flex-col gap-2 mb-4">
-                            <label htmlFor="">Payee Account Information</label>
+                            <label htmlFor="">Beneficiary Name</label>
+                            <input className="p-4 border-2 border-neutral-700 rounded" required type="text" />
+                        </div>
+                        <div className="flex flex-col gap-2 mb-4">
+                            <label htmlFor="">Branch Code</label>
                             <input className="p-4 border-2 border-neutral-700 rounded" required type="text" />
                         </div>
                         <div className="flex flex-col gap-2 mb-4">
